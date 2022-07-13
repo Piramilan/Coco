@@ -84,7 +84,7 @@ const Predictions = ({ url }) => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="w-auto max-h-[50vh] md:w-[450px]">
+      <div className="w-[300px] md:w-[450px]">
         <img src="" id="image" alt="" />
       </div>
       {loading ? (
