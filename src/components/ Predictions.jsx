@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as ml5 from "ml5";
 import { ModelURL } from "../ModelUrl";
+import { Link } from "react-router-dom";
 
 const Predictions = ({ url }) => {
   const [prediction, setPrediction] = useState([]);
@@ -83,7 +84,7 @@ const Predictions = ({ url }) => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="w-[300px] md:w-[450px]">
+      <div className="w-auto max-h-[50vh] md:w-[450px]">
         <img src="" id="image" alt="" />
       </div>
       {loading ? (
@@ -119,12 +120,34 @@ const Predictions = ({ url }) => {
           {result?.slice(1).map((item, index) => (
             <div
               key={index}
-              className="flex flex-row font-semibold justify-evenly my-1 text-center text-[#041218] px-4 py-2 border-b bg-white border-[#041218] w-full rounded-lg shadow-lg"
+              className="flex flex-row font-semibold justify-evenly my-1 text-center text-[#041218] px-4 py-2 border-b bg-white border-[#041218] w-[70vw] md:w-[350px] rounded-lg shadow-lg"
             >
               <h1 className="">{item.label}</h1>
               <p className="">{covertPercentage(item.confidence)}%</p>
             </div>
           ))}
+          <div>
+            <Link
+              to="/"
+              className="flex items-center justify-center rounded-xl text-[#041218] border-[#041218] bg-[#82CF19] font-bold p-2 mt-4 cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="36"
+                height="36"
+                fill="currentColor"
+                class="bi bi-arrow-left-short"
+                viewBox="0 0 16 16"
+              >
+                {" "}
+                <path
+                  fill-rule="evenodd"
+                  d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"
+                />{" "}
+              </svg>
+              <span>Predict Again</span>
+            </Link>
+          </div>
         </div>
       )}
     </div>
