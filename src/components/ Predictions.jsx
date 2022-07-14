@@ -117,7 +117,7 @@ const Predictions = ({ url }) => {
             </p>
           </div>
 
-          {result?.slice(1).map((item, index) => (
+          {result?.map((item, index) => (
             <div
               key={index}
               className="flex flex-row font-semibold justify-evenly my-1 text-center text-[#041218] px-4 py-2 border-b bg-white border-[#041218] w-[70vw] md:w-[350px] rounded-lg shadow-lg"
