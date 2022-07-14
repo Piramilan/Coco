@@ -40,9 +40,9 @@ const Predictions = ({ url }) => {
       );
     };
     classifyImg();
-    setTimeout(function () {
-      setPrediction("");
-    }, 2000);
+    // setTimeout(function () {
+    //   setPrediction("");
+    // }, 500);
   }, [prediction, url]);
 
   // useEffect(() => {

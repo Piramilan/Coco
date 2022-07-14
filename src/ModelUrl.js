@@ -1,2 +1,7 @@
-export const ModelURL =
-  "https://teachablemachine.withgoogle.com/models/BBLEnW2ph/";
+// 5 Types
+// const URl = "https://teachablemachine.withgoogle.com/models/BBLEnW2ph/";
+
+// 4 Types
+const URL = "https://teachablemachine.withgoogle.com/models/6Y0ZOWYcC/";
+
+export const ModelURL = URL;

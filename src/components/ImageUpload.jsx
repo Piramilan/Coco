@@ -62,7 +62,7 @@ const ImageUpload = () => {
         </div>
         <div className="flex justify-center p-2 pb-4">
           <Link
-            to="/results"
+            to={`/${imageURLs.length > 0 ? "results" : ""}`}
             state={{ data: imageURLs }}
             // className="outline-2 outline-[#05F258]/50"
             className="w-36 text-center text-xl px-4 py-2 border-2 text-[#041218] border-[#041218] bg-[#82CF19] rounded shadow-xl"
