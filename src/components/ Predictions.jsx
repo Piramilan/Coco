@@ -7,7 +7,8 @@ const Predictions = ({ url }) => {
   const [prediction, setPrediction] = useState([]);
   const [result, setResult] = useState([]);
   const [loading, setLoading] = useState(true);
-  let imageModelURL = ModelURL;
+  let imageModelURL =
+    "https://teachablemachine.withgoogle.com/models/BBLEnW2ph/";
   // "https://teachablemachine.withgoogle.com/models/BBLEnW2ph/";
 
   const classifier = ml5.imageClassifier(imageModelURL + "model.json");
