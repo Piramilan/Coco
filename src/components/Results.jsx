@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import Predictions from "./ Predictions";
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import Predictions from './ Predictions';
 
 const Results = () => {
   const [imageUrls, setImageUrls] = useState([]);
@@ -12,9 +12,11 @@ const Results = () => {
   }, [location]);
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="font-bold text-2xl mb-4 ">Prediction Results</h1>
-      <div className="grid grid-cols-1">
+    <div className='flex flex-col items-center justify-center'>
+      <h1 className='font-bold text-3xl lg:text-4xl mb-4 '>
+        Prediction Results
+      </h1>
+      <div className='grid grid-cols-1'>
         {imageUrls?.map((url, index) => (
           <Predictions url={url} key={index} />
         ))}
